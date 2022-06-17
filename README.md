@@ -11,13 +11,13 @@ terminal_command_to_run_in_server should be a system command under quotes.
 Usage
 =====
 * Create executable:
-    make
+    ```make```
 
 * Server Usage:
-    ./socket server <port>
+    ```./socket server <port>```
 
 * Client Usage:
-    ./socket client <port> <terminal_command_to_run_in_server>
+    ```./socket client <port> <terminal_command_to_run_in_server>```
 
 Credits
 =======
