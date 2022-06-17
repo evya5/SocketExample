@@ -1,0 +1,23 @@
+CXX=g++
+INCS=-I.
+CXXFLAGS = -Wall -std=c++11 -g $(INCS)
+
+SOCKET_LIBSRC = MySocket.cpp MySocket.h
+UTILS_LIBSRC = ErrHandler.h
+
+TAR=tar
+TARFLAGS=-cvf
+TARNAME=socket.tar
+TARSRCS=$(SOCKET_LIBSRC) $(UTILS_LIBSRC) Makefile README
+
+OUTPUTFLAG = -o
+SOCKET_OUTPUT_NAME = socket
+
+make:
+	$(CXX) $(CXXFLAGS) $(SOCKET_LIBSRC) $(OUTPUTFLAG) $(SOCKET_OUTPUT_NAME)
+
+clean:
+	$(RM) $(SOCKET_OUTPUT_NAME) *~ *core
+
+tar:
+	$(TAR) $(TARFLAGS) $(TARNAME) $(TARSRCS)
