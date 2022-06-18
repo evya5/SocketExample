@@ -1,4 +1,4 @@
-# socketExample
+# socket Example
 
 Overview
 --------
